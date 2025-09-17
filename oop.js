@@ -32,3 +32,29 @@ genericAnimal.displayInfo();
 myDog.displayInfo();
 myDog.speak();
 
+//2. encapsulation
+//enpasulation - hiding internal implentation
+//or combining data and methods 
+//and work with that data in one class 
+
+console.log('---Encapsulation---');
+
+class BankAccount {
+    //# - means,that private property
+    #balance = 0; //private property
+    constructor(initialBalance){
+        if(initialBalance > 0) {
+            this.#balance = initialBalance;
+        }    
+    }
+    //public method for deposting money 
+    deposit(amount) {
+        if(amount > 0) {
+            this.#balance += amount;
+            console.log(`Deposit: ${amount}. New Balance: ${this.#balance}`);
+            
+        }  
+    }
+
+
+}
