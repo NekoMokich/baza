@@ -32,5 +32,3 @@ genericAnimal.displayInfo();
 myDog.displayInfo();
 myDog.speak();
 
-
-HUETA
