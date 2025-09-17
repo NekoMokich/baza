@@ -57,4 +57,13 @@ class BankAccount {
     }
 
 
+    //public method for withdrawing money
+    withdraw(amount){
+     if(amount > 0 && amount <= this.#balance) {
+        this.#balance -= amount;
+        console.log(`Withdraw: ${amount}. New Balance: ${this.#balance}`);
+    } else {
+        console.log('your balance is low');
+    }
+
 }
