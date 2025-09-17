@@ -47,6 +47,7 @@ class BankAccount {
             this.#balance = initialBalance;
         }    
     }
+}
     //public method for deposting money 
     deposit(amount) {
         if(amount > 0) {
