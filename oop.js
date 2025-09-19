@@ -90,6 +90,15 @@ class Dog extends Animal {
     constructor(name, age, breed) {
         //super - call the parent class constructor
         super(name, age);
-        this.breed = breed;
+        this.breed = breed; //add personal new propety
+    }
+    speak() {
+        console.log(`${this.name} barking: haw-haw`);
+    }
+
+    //can call and inheritance method inside subsidiary
+    displayInfo() {
+        super.displayInfo(); //parent
+        console.log(`breed:${this.breed}`);
     }
 }
