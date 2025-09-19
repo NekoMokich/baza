@@ -96,9 +96,37 @@ class Dog extends Animal {
         console.log(`${this.name} barking: haw-haw`);
     }
 
-    //can call and inheritance method inside subsidiary
+    //can call and inheritance method inside child
     displayInfo() {
         super.displayInfo(); //parent
         console.log(`breed:${this.breed}`);
     }
 }
+
+const newDog = new Dog ("Bulik", 5,"Gypsy");
+newDog.displayInfo(); //call two methods: parent and child
+newDog.speak(); //call already definite method
+
+// 4. Polymorphism 
+console.log("Polymorphism");
+
+class Cat extends Animal {
+    //redefine method speak()
+    speak() {
+        console.log(`${this.name} Meowing: UwU!`);
+    }
+}
+
+const myCat = new Cat("Bashmak", 5);
+
+//creating an array of different objects and call the same method 
+
+const animals = [myCat, newDog, new Animal("Something", 1)];
+
+//iterate to array and call the same methods speak()
+//depending on the class of the objects its specific
+//implemtation of this method will be called 
+
+animals.forEach(animal => {
+    animal.speak();
+});
