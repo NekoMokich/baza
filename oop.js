@@ -47,7 +47,7 @@ class BankAccount {
             this.#balance = initialBalance;
         }    
     }
-}
+
     //public method for deposting money 
     deposit(amount) {
         if(amount > 0) {
@@ -59,7 +59,7 @@ class BankAccount {
 
 
     //public method for withdrawing money
-    withdraw(amount){
+    withdraw(amount) {
      if(amount > 0 && amount <= this.#balance) {
         this.#balance -= amount;
         console.log(`Withdraw: ${amount}. New Balance: ${this.#balance}`);
@@ -67,4 +67,5 @@ class BankAccount {
         console.log('your balance is low');
     }
 
+}
 }
