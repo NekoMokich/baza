@@ -68,4 +68,28 @@ class BankAccount {
     }
 
 }
+    //private method for getting balance
+    #getBalance() {
+        return this.#balance;
+    }
+}
+
+const myAccount = new BankAccount(300);
+myAccount.deposit(50);
+myAccount.withdraw(25);
+//console.log(myAccount.#balance); //error private properites
+//myAccount.#getBalance; //error pritave method
+
+
+
+//3. Inheritance
+//inheritance - creating a new class based on an existing one
+console.log('----inheritance--');
+
+class Dog extends Animal {
+    constructor(name, age, breed) {
+        //super - call the parent class constructor
+        super(name, age);
+        this.breed = breed;
+    }
 }
